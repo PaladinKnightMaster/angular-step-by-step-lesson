@@ -119,12 +119,16 @@ export class HousingService {
     return this.housingLocationList;
   }
   
-/**
- * Returns a HousingLocation object by its id
- * @param id - the id of the HousingLocation to be returned
- */
-getHousingLocationById(id: number): HousingLocation | undefined {
-  // Find the HousingLocation object that matches the given id
-  return this.housingLocationList.find(housingLocation => housingLocation.id === id);
-}
+  /**
+   * Returns a HousingLocation object by its id
+   * @param id - the id of the HousingLocation to be returned
+   */
+  getHousingLocationById(id: number): HousingLocation | undefined {
+    // Find the HousingLocation object that matches the given id
+    return this.housingLocationList.find(housingLocation => housingLocation.id === id);
+  }
+
+  submitApplication(firstName: string, lastName: string, email: string) {
+    console.log(`Home application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}`);
+  }
 }
